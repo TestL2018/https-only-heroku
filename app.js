@@ -2,9 +2,8 @@ var express = require('express');
 var app = express();
 
 const env = process.env.NODE_ENV || 'development';
-const bodyParser = require('body-parser');
-const path = require('path');
-//const app = express();
+//const bodyParser = require('body-parser');
+//const path = require('path');
 
 app.get('*', (req, res, next) => {
   if (req.headers['x-forwarded-proto'] != 'https'){
